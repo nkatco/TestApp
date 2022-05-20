@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph2"
+    app:startDestination="@id/cartPageFragment">
+    <fragment
+        android:id="@+id/cartPageFragment"
+        android:name="com.example.testapp.fragments.CartPageFragment"
+        android:label="CartPageFragment" >
+        <action
+            android:id="@+id/action_cartPageFragment_to_profilePageFragment"
+            app:destination="@id/profilePageFragment" />
+        <action
+            android:id="@+id/action_cartPageFragment_to_shopPageFragment2"
+            app:destination="@id/shopPageFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/profilePageFragment"
+        android:name="com.example.testapp.fragments.ProfilePageFragment"
+        android:label="ProfilePageFragment" >
+        <action
+            android:id="@+id/action_profilePageFragment_to_cartPageFragment"
+            app:destination="@id/cartPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shopPageFragment2"
+        android:name="com.example.testapp.fragments.ShopPageFragment"
+        android:label="ShopPageFragment" >
+        <action
+            android:id="@+id/action_shopPageFragment2_to_cartPageFragment"
+            app:destination="@id/cartPageFragment" />
+        <action
+            android:id="@+id/action_shopPageFragment2_to_profilePageFragment"
+            app:destination="@id/profilePageFragment" />
+    </fragment>
+</navigation>
